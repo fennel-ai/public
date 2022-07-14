@@ -3,7 +3,31 @@ entries:
   airbyte:
   - apiVersion: v2
     appVersion: 0.39.36-alpha
-    created: "2022-07-14T00:21:16.524244-07:00"
+    created: "2022-07-14T00:54:59.070227-07:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.x.x
+    - condition: logs.minio.enabled
+      name: minio
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: Helm chart to deploy airbyte
+    digest: 52a6e121f8dd57110ddd9fb89ed484d5586bb6e4e8eda3b7362c674fa72c88bf
+    name: airbyte
+    type: application
+    urls:
+    - airbyte-0.3.8.tgz
+    version: 0.3.8
+  - apiVersion: v2
+    appVersion: 0.39.36-alpha
+    created: "2022-07-14T00:54:59.059782-07:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -30,7 +54,7 @@ entries:
       category: Infrastructure
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-07-14T00:21:16.524856-07:00"
+    created: "2022-07-14T00:54:59.071181-07:00"
     description: A Library Helm Chart for grouping common logic between bitnami charts.
       This chart is not deployable by itself.
     digest: 612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
@@ -58,7 +82,7 @@ entries:
       category: Infrastructure
     apiVersion: v2
     appVersion: 2022.7.8
-    created: "2022-07-14T00:21:16.527251-07:00"
+    created: "2022-07-14T00:54:59.073438-07:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -92,7 +116,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 11.14.0
-    created: "2022-07-14T00:21:16.529494-07:00"
+    created: "2022-07-14T00:54:59.076697-07:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -121,4 +145,4 @@ entries:
     urls:
     - charts/postgresql-10.16.2.tgz
     version: 10.16.2
-generated: "2022-07-14T00:21:16.516747-07:00"
+generated: "2022-07-14T00:54:59.050162-07:00"

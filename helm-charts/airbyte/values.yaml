@@ -810,13 +810,13 @@ logs:
   ## @param logs.accessKey.existingSecret
   ## @param logs.accessKey.existingSecretKey
   accessKey:
-    existingSecret: "airbyte-minio"
-    existingSecretKey: "root-user"
+    existingSecret: ""
+    existingSecretKey: ""
   ## @param logs.secretKey.existingSecret
   ## @param logs.secretKey.existingSecretKey
   secretKey:
-    existingSecret: "airbyte-minio"
-    existingSecretKey: "root-password"
+    existingSecret: ""
+    existingSecretKey: ""
 
   ## @param logs.minio.enabled Switch to enable or disable the Minio helm chart
   minio:
