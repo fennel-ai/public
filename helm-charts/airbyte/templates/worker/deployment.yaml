@@ -119,28 +119,28 @@ spec:
         - name: JOB_KUBE_ANNOTATIONS
           valueFrom:
             configMapKeyRef:
-              name: airbyte-env
+              name: {{ include "common.names.fullname" . }}-env
               key: JOB_KUBE_ANNOTATIONS
         {{- end }}
         {{- if $.Values.jobs.kube.nodeSelector }}
         - name: JOB_KUBE_NODE_SELECTORS
           valueFrom:
             configMapKeyRef:
-              name: airbyte-env
+              name: {{ include "common.names.fullname" . }}-env
               key: JOB_KUBE_NODE_SELECTORS
         {{- end }}
         {{- if $.Values.jobs.kube.tolerations }}
         - name: JOB_KUBE_TOLERATIONS
           valueFrom:
             configMapKeyRef:
-              name: airbyte-env
+              name: {{ include "common.names.fullname" . }}-env
               key: JOB_KUBE_TOLERATIONS
         {{- end }}
         {{- if $.Values.jobs.kube.main_container_image_pull_secret }}
         - name: JOB_KUBE_MAIN_CONTAINER_IMAGE_PULL_SECRET
           valueFrom:
             configMapKeyRef:
-              name: airbyte-env
+              name: {{ include "common.names.fullname" . }}-env
               key: JOB_KUBE_MAIN_CONTAINER_IMAGE_PULL_SECRET
         {{- end }}
         - name: JOB_MAIN_CONTAINER_CPU_REQUEST
