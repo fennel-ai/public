@@ -50,8 +50,8 @@ spec:
           value: {{ include "airbyte.database.port" . | quote }}
         - name: POSTGRES_USER
           valueFrom:
-            secretKeyRef:
-              name: {{ include "common.names.fullname" . }}-secrets
+            configMapKeyRef:
+              name: {{ include "common.names.fullname" . }}-env
               key: DATABASE_USER
         - name: POSTGRES_PWD
           valueFrom:

@@ -69,8 +69,8 @@ spec:
               key: DATABASE_URL
         - name: DATABASE_USER
           valueFrom:
-            secretKeyRef:
-              name: {{ include "common.names.fullname" . }}-secrets
+            configMapKeyRef:
+              name: {{ include "common.names.fullname" . }}-env
               key: DATABASE_USER
         - name: TRACKING_STRATEGY
           valueFrom:
