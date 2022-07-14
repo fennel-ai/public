@@ -2,6 +2,10 @@
 
 Helm charts for Airbyte.
 
+This is forked from Airbyte's source code - https://github.com/airbytehq/airbyte
+
+NOTE: This is a workaround and plan to be used and exist till Airbyte officially publish a helm chart. This is being tracked here - https://github.com/airbytehq/airbyte/issues/1868
+
 ## Parameters
 
 ### Global Parameters
