@@ -121,16 +121,20 @@ spec:
             configMapKeyRef:
               name: {{ include "common.names.fullname" . }}-env
               key: S3_LOG_BUCKET_REGION
+        {{- if $.Values.logs.accessKey.existingSecret }}
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
             secretKeyRef:
               name: {{ .Values.logs.accessKey.existingSecret }}
               key: {{ .Values.logs.accessKey.existingSecretKey }}
+        {{- end }}
+        {{- if $.Values.logs.secretKey.existingSecret }}
         - name: AWS_SECRET_ACCESS_KEY
           valueFrom:
             secretKeyRef:
               name: {{ .Values.logs.secretKey.existingSecret }}
               key: {{ .Values.logs.secretKey.existingSecretKey }}
+        {{- end }}
         - name: S3_MINIO_ENDPOINT
           valueFrom:
             configMapKeyRef:
