@@ -3,7 +3,7 @@ entries:
   airbyte:
   - apiVersion: v2
     appVersion: 0.39.36-alpha
-    created: "2022-07-14T02:12:07.767261-07:00"
+    created: "2022-07-14T02:22:40.161827-07:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -19,42 +19,18 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 11.x.x
     description: Helm chart to deploy airbyte
-    digest: 28602b095d18dad3f8746a95cd09429a2364102fa84c73d7dfcd291faf9955db
+    digest: 1bcc619b7d0eeac49c662027fca45cba512e21c7ab768c6b814a667bfe72e599
     name: airbyte
     type: application
     urls:
     - airbyte-0.3.8.tgz
     version: 0.3.8
-  - apiVersion: v2
-    appVersion: 0.39.36-alpha
-    created: "2022-07-14T02:12:07.757801-07:00"
-    dependencies:
-    - name: common
-      repository: https://charts.bitnami.com/bitnami
-      tags:
-      - bitnami-common
-      version: 1.x.x
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 10.x.x
-    - condition: logs.minio.enabled
-      name: minio
-      repository: https://charts.bitnami.com/bitnami
-      version: 11.x.x
-    description: Helm chart to deploy airbyte
-    digest: 6d58045e26b5b1d8c2b268041aa86b99aa310fbb467ff8633e0216a565219ad8
-    name: airbyte
-    type: application
-    urls:
-    - airbyte-0.3.7.tgz
-    version: 0.3.7
   common:
   - annotations:
       category: Infrastructure
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-07-14T02:12:07.767752-07:00"
+    created: "2022-07-14T02:22:40.162432-07:00"
     description: A Library Helm Chart for grouping common logic between bitnami charts.
       This chart is not deployable by itself.
     digest: 612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
@@ -82,7 +58,7 @@ entries:
       category: Infrastructure
     apiVersion: v2
     appVersion: 2022.7.8
-    created: "2022-07-14T02:12:07.769768-07:00"
+    created: "2022-07-14T02:22:40.16483-07:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -116,7 +92,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 11.14.0
-    created: "2022-07-14T02:12:07.772285-07:00"
+    created: "2022-07-14T02:22:40.167243-07:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -145,4 +121,4 @@ entries:
     urls:
     - charts/postgresql-10.16.2.tgz
     version: 10.16.2
-generated: "2022-07-14T02:12:07.750757-07:00"
+generated: "2022-07-14T02:22:40.153937-07:00"
