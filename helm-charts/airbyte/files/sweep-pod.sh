@@ -14,10 +14,10 @@ delete_worker_pod() {
 while :
 do
     # Shorter time window for completed pods
-    SUCCESS_DATE_STR=`date -d 'now - 2 hours' --utc -Ins`
+    SUCCESS_DATE_STR=`date -d 'now - 10 minutes' --utc -Ins`
     SUCCESS_DATE=`date -d $SUCCESS_DATE_STR +%s`
     # Longer time window for pods in error (to debug)
-    NON_SUCCESS_DATE_STR=`date -d 'now - 24 hours' --utc -Ins`
+    NON_SUCCESS_DATE_STR=`date -d 'now - 1 hour' --utc -Ins`
     NON_SUCCESS_DATE=`date -d $NON_SUCCESS_DATE_STR +%s`
     (
         IFS=$'\n'
